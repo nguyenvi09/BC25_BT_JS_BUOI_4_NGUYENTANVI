@@ -25,27 +25,21 @@ document.getElementById("btnSapXep").onclick = function() {
     var c = document.getElementById("c").value *1;
     if (a <= b && a <= c){
         if (b <= c){
-            // console.log(a, b, c);
             document.getElementById("ketQuaSapXep").innerHTML = "3 số theo thứ tự tăng dần là: "  + a + " - " + b + " - " + c;
         }else {
-            // console.log(a, c, b);
             document.getElementById("ketQuaSapXep").innerHTML = "3 số theo thứ tự tăng dần là: "  + a + " - " + c + " - " + b;
         }
     }else if (b <= a && b <= c){
         if (a <= c){
-            // console.log(b, a, c);
             document.getElementById("ketQuaSapXep").innerHTML = "3 số theo thứ tự tăng dần là: " + b + " - " + a + " - " + c;
 
         }else{
-            // console.log(b, c, a);
             document.getElementById("ketQuaSapXep").innerHTML = "3 số theo thứ tự tăng dần là: "  + b + " - " + c + " - " + a;
         }
     }else {
         if(a <= b){
-            // console.log(c, a, b);
             document.getElementById("ketQuaSapXep").innerHTML = "3 số theo thứ tự tăng dần là: "  + c + " - " + a + " - " + b;
         }else {
-            // console.log(c, b, a);
             document.getElementById("ketQuaSapXep").innerHTML = "3 số theo thứ tự tăng dần là: "  + c + " - " + b + " - " + a;
         }
     }
@@ -116,7 +110,7 @@ if(x%2 == 0 && y%2 == 0 && z%2 == 0){
     console.log("1 chẵn 2 lẻ");
 }else {
     console.log("0 chẵn 3 lẻ");
-}
+};
 
 /**
  * BT4:
@@ -146,9 +140,9 @@ document.getElementById("kiemTraTamGiac").onclick = function () {
             document.getElementById("ketQuaTamGiac").innerHTML = "Đây là tam giác VUÔNG";
         } else {
             document.getElementById("ketQuaTamGiac").innerHTML = "Đây là tam giác THƯỜNG";
-        }
+        };
 
     }else {
         document.getElementById("ketQuaTamGiac").innerHTML = "Đây là không phải tam giác";
-    }
-}
+    };
+};
