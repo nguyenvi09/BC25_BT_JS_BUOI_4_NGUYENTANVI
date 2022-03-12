@@ -23,28 +23,33 @@ document.getElementById("btnSapXep").onclick = function() {
     var a = document.getElementById("a").value *1;
     var b = document.getElementById("b").value *1;
     var c = document.getElementById("c").value *1;
+    var ketQuaSX;
+
     if (a <= b && a <= c){
         if (b <= c){
-            document.getElementById("ketQuaSapXep").innerHTML = "3 số theo thứ tự tăng dần là: "  + a + " - " + b + " - " + c;
+            ketQuaSX = a + " - " + b + " - " + c;
         }else {
-            document.getElementById("ketQuaSapXep").innerHTML = "3 số theo thứ tự tăng dần là: "  + a + " - " + c + " - " + b;
-        }
+            ketQuaSX = a + " - " + c + " - " + b;
+        };
     }else if (b <= a && b <= c){
         if (a <= c){
-            document.getElementById("ketQuaSapXep").innerHTML = "3 số theo thứ tự tăng dần là: " + b + " - " + a + " - " + c;
+            ketQuaSX = b + " - " + a + " - " + c;
 
         }else{
-            document.getElementById("ketQuaSapXep").innerHTML = "3 số theo thứ tự tăng dần là: "  + b + " - " + c + " - " + a;
-        }
+            ketQuaSX = b + " - " + c + " - " + a;
+        };
     }else {
         if(a <= b){
-            document.getElementById("ketQuaSapXep").innerHTML = "3 số theo thứ tự tăng dần là: "  + c + " - " + a + " - " + b;
+            ketQuaSX = c + " - " + a + " - " + b;
         }else {
-            document.getElementById("ketQuaSapXep").innerHTML = "3 số theo thứ tự tăng dần là: "  + c + " - " + b + " - " + a;
-        }
-    }
+            ketQuaSX = c + " - " + b + " - " + a;
+        };
+    };
 
-}
+
+    document.getElementById("ketQuaSapXep").innerHTML = "3 số theo thứ tự tăng dần là: "  + ketQuaSX;
+
+};
 
 
 /**
@@ -62,19 +67,22 @@ document.getElementById("btnSapXep").onclick = function() {
 
 document.getElementById("hoi").onclick = function(){
     var value = document.getElementById("ai").value;
+    var thongBao;
 
     if(value === "B"){
-        document.getElementById("xuatCauChao").innerHTML = "Chào Bố!";
+        thongBao = "Chào Bố!";
     }else if(value === "M"){
-        document.getElementById("xuatCauChao").innerHTML = "Chào Mẹ!";
+        thongBao = "Chào Mẹ!";
     }else if(value === "A"){
-        document.getElementById("xuatCauChao").innerHTML = "Chào Anh trai!";
+        thongBao = "Chào Anh trai!";
     }else if(value === "E"){
-        document.getElementById("xuatCauChao").innerHTML = "Chào Em gái!";
+        thongBao = "Chào Em gái!";
     }else{
-        document.getElementById("xuatCauChao").innerHTML = "Chào Bạn!";
-    }
-}
+        thongBao = "Chào Bạn!";
+    };
+
+    document.getElementById("xuatCauChao").innerHTML = thongBao;
+};
 
 /**
  * BT3:  Cho 3 số nguyên. Viết chương trình xuất ra có bao nhiêu số lẻ và bao nhiêu số chẵn.
@@ -130,19 +138,21 @@ document.getElementById("kiemTraTamGiac").onclick = function () {
     var a = document.getElementById("canhA").value * 1;
     var b = document.getElementById("canhB").value * 1;
     var c = document.getElementById("canhC").value * 1;
+    var ketQuaKTTG;
 
     if (a + b > c && a + c > b && b + c > a) {
         if (a == b && a == c && b == c) {
-            document.getElementById("ketQuaTamGiac").innerHTML = "Đây là tam giác ĐỀU";
+            ketQuaKTTG = "Đây là tam giác ĐỀU";
         }else if (a == b || a == c || b == c) {
-            document.getElementById("ketQuaTamGiac").innerHTML = "Đây là tam giác CÂN";
+            ketQuaKTTG = "Đây là tam giác CÂN";
         }else if (a*a == b*b + c*c || b*b == a*a + c*c || c*c == b*b + a*a){
-            document.getElementById("ketQuaTamGiac").innerHTML = "Đây là tam giác VUÔNG";
+            ketQuaKTTG = "Đây là tam giác VUÔNG";
         } else {
-            document.getElementById("ketQuaTamGiac").innerHTML = "Đây là tam giác THƯỜNG";
+            ketQuaKTTG = "Đây là tam giác THƯỜNG";
         };
-
     }else {
-        document.getElementById("ketQuaTamGiac").innerHTML = "Đây là không phải tam giác";
+        ketQuaKTTG = "Đây là không phải tam giác";
     };
+
+    document.getElementById("ketQuaTamGiac").innerHTML = ketQuaKTTG;
 };
